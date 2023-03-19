@@ -9,20 +9,62 @@
     --footer-logo: #F4F4FD;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul { 
+    padding-left: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+address {
+    font-style: normal;
+}
+
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    outline: 2px solid tomato;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-colour);
     background: var(--primary-background);
 }
 
+img { 
+    display: block;
+}
+
+
 .link {
     text-decoration: none;
 }
+
+
 .list {
     list-style: none;
 }
 
 /**------------Header ------------------*/
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .header-logo {
     font-family: 'Raleway', sans-serif;
@@ -52,10 +94,15 @@ body {
 color: var(--accent-btn)
 }
 
+.header-list {
+    display: flex;
+    gap: 40px;
+}
 
-
-.header-contacts-list {
-    font-style: normal;
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 76px;
 }
 
 .header-link-contact {
@@ -76,6 +123,9 @@ color: var(--accent-btn)
 
 
 .about-title {
+    max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 48px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -85,10 +135,15 @@ color: var(--accent-btn)
 }
 
 .about {
+    padding-top: 188px;
+    padding-bottom: 188px;
     background: var(--title-colour);
 }
 
 .btn-primary { 
+    margin: 0 auto;
+    padding: 16px 32px;
+    gap: 10px;
     font-family: "Roboto", sans-serif;
     font-weight:500;
     font-size: 16px;
@@ -96,9 +151,10 @@ color: var(--accent-btn)
     display: flex;
     align-items: center;
     letter-spacing: 0.04em;
-    cursor: pointer;
-   
+    border: transparent;
+    border-radius: 4px;
 }
+
 
 .btn-primary {
     color: var(--white-text);
@@ -113,6 +169,7 @@ background:var(--accent-btn)
 /**-----------Advantages-------------*/
 
 .section-subtitle { 
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -128,9 +185,19 @@ background:var(--accent-btn)
     color: var(--primary-text-colour);
 }
 
+.section-list {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
 /**-----------What are we doing, Our team -------------*/
 
 .section-work-title {
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -140,34 +207,56 @@ background:var(--accent-btn)
     color: var(--title-colour);
 }
 
+.section-list.work {
+    padding-top: 0;
+}
 
 
 .section-team {
     background: var(--footer-logo);
 }
 
-.section-list .team-item { 
-background: var(--primary-background);
+.section-list.team {
+    padding-top: 0;
 }
+
+
+.section-list .team-item { 
+    background: var(--primary-background);
+}
+
+.team-wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /**------------Footer-----------------*/
 
 .section-footer { 
+    padding-top: 100px;
+    padding-bottom: 100px;
     background: var(--title-colour);
 }
 
 .footer-logo { 
+
     font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 21px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: var(--footer-logo);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--footer-logo);
 
 }
 
@@ -176,6 +265,8 @@ color: var(--footer-logo);
 }
 
 .footer-text {
+    max-width: 264px;
+    margin-top: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -186,20 +277,34 @@ color: var(--footer-logo);
 
 /**------------Portfolio------------------*/
 
-.btn-secondary {
-    font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.04em;
-        color: var(--accent-colour);
-        cursor: pointer;
+.navigation-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
+.section-list.navigation {
+    padding-top: 96px;
+    padding-bottom: 72px;
+    gap: 24px;
+}
+
+
+.btn-secondary {
+    padding: 12px 24px;
+    border: 1px solid #E7E9FC;
+     border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--accent-colour);
+}
 
 .btn-secondary {
     background: var(--footer-logo);
@@ -212,7 +317,30 @@ color: var(--footer-logo);
 }
 /**------------Gallery------------------*/
 
+.nav-btn-list {
+    padding-bottom: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 48px / 3));
+    row-gap: 48px;
+    column-gap: 24px;
+    }
+
+.img-btn {
+    width: 360px;
+    height: 300px;
+}
+
+.gallery-descr-wrap {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
+
 .gallery-list-item .section-title {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.20;
@@ -221,10 +349,11 @@ color: var(--footer-logo);
 }
 
 .gallery-list-item .secondary-text {
+    max-width: 296px;
     font-weight: 400;
-        font-size: 16px;
-        line-height: 1.50;
-        letter-spacing: 0.02em;
-        color: var(--footer-logo);
-        background: var(--accent-colour);
+    font-size: 16px;
+    line-height: 1.50;
+    letter-spacing: 0.02em;
+    color: var(--footer-logo);
+    background: var(--accent-colour);
 }
